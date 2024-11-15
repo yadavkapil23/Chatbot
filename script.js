@@ -23,7 +23,7 @@ async function sendMessage() {
 
     try {
         // Send user input to the Flask backend
-        const response = await fetch('/chat', {
+        const response = await fetch('http://127.0.0.1:5000/chat', { // Full URL to Flask backend
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message }),
@@ -39,6 +39,7 @@ async function sendMessage() {
         addMessage('Oops! Something went wrong.', 'bot');
     }
 }
+
 
 // Event listener for the send button
 sendButton.addEventListener('click', sendMessage);
