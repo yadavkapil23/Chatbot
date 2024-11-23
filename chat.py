@@ -3,7 +3,8 @@ from flask_cors import CORS
 from openai import get_bot_response
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, origins=["https://your-site.netlify.app", "http://localhost:3000"])
+  # Enable CORS for all routes
 
 @app.route('/chat', methods=['POST'])
 def chat():
