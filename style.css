@@ -1,23 +1,22 @@
 /* General styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #a4dcdc;
-    /* Soft blue */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  background-color: #a4dcdc; /* Soft blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* Chat container styling */
 .chat-container {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 500px; /* Increase the width */
-  max-width: 100%;
+  width: 500px; /* Width of the chat container */
+  max-width: 100%; /* Ensure it fits smaller screens */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -26,82 +25,67 @@ body {
 /* Messages display area */
 .messages {
   flex-grow: 1;
-  overflow-y: auto;
-  border: 1px solid #9fb74a;
+  overflow-y: auto; /* Allow scrolling when messages overflow */
+  border: 1px solid #9fb74a; /* Green border */
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 15px;
-  height: 500px; /* Increase the height */
-  background-color: #f3e5f5;
+  height: 500px; /* Height of the chat area */
+  background-color: rgb(255, 255, 255); /* Light lavender */
+  display: flex;
+  flex-direction: column; /* Ensure messages stack vertically */
 }
 
-  
-  /* Messages display area */
-  .messages {
-    flex-grow: 1;
-    overflow-y: auto;
-    border: 1px solid #9fb74a;
-    /* Subtle purple border */
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
-    height: 300px;
-    background-color: #ffffff;
-    /* Light lavender */
-  }
-  
-  /* Individual message styles */
-  .messages div {
-    margin: 5px 0;
-    padding: 8px 12px;
-    border-radius: 15px;
-    max-width: 80%;
-    display: inline-block;
-  }
-  
-  .user {
-    align-self: flex-end;
-    background-color: #6200ea;
-    /* Vibrant purple */
-    color: white;
-  }
-  
-  .bot {
-    align-self: flex-start;
-    background-color: #bbdefb;
-    /* Light sky blue */
-    color: black;
-  }
-  
-  /* Input area styling */
-  .input-area {
-    display: flex;
-    gap: 10px;
-  }
-  
-  input[type="text"] {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #c5cae9;
-    /* Matching purple */
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #e3f2fd;
-    /* Soft blue background */
-  }
-  
-  button {
-    background-color: #6200ea;
-    /* Vibrant purple */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3700b3;
-    /* Darker purple for hover */
-  }
+/* Individual message styles */
+.messages div {
+  margin: 5px 0; /* Add spacing between messages */
+  padding: 8px 12px; /* Inner spacing for readability */
+  border-radius: 15px; /* Rounded corners for messages */
+  max-width: 80%; /* Restrict the width of the message */
+  display: inline-block; /* Background adjusts to the message's length */
+}
+
+/* User message styling */
+.user {
+  align-self: flex-end; /* Align user messages to the right */
+  background-color: #6200ea; /* Vibrant purple */
+  color: white; /* White text for user messages */
+  text-align: left; /* Align text inside the bubble */
+}
+
+/* Bot message styling */
+.bot {
+  align-self: flex-start; /* Align bot messages to the left */
+  background-color: #bbdefb; /* Light sky blue */
+  color: black; /* Black text for bot messages */
+  text-align: left; /* Align text inside the bubble */
+}
+
+/* Input area styling */
+.input-area {
+  display: flex; /* Arrange input box and button side by side */
+  gap: 10px; /* Add spacing between input box and button */
+}
+
+input[type="text"] {
+  flex-grow: 1; /* Input box takes up available space */
+  padding: 10px; /* Inner padding for better readability */
+  border: 1px solid #1c5a33; /* Matching green border */
+  border-radius: 5px; /* Rounded corners for the input box */
+  font-size: 16px; /* Font size for input text */
+  background-color: #e3f2fd; /* Soft blue background */
+}
+
+button {
+  background-color: #6200ea; /* Vibrant purple */
+  color: white; /* White text for the button */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Inner padding for the button */
+  font-size: 16px; /* Font size for button text */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #00b35a; /* Change color on hover */
+}

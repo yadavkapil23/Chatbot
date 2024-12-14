@@ -22,9 +22,8 @@ async function sendMessage() {
   userInput.value = "";
 
   try {
-    // Send user input to the Flask backend
-    const response = await fetch("http://127.0.0.1:5000/chat", {
-      // Full URL to Flask backend
+    // Send user input to the Flask backend (updated URL for deployment)
+    const response = await fetch("/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),

@@ -1,10 +1,10 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import get_bot_response
 
 app = Flask(__name__)
-CORS(app, origins=["https://your-site.netlify.app", "http://localhost:3000"])
-  # Enable CORS for all routes
+CORS(app)
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -14,4 +14,6 @@ def chat():
     return jsonify({"response": response})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Fetch the port from the environment variable (e.g., for deployment)
+    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if not set
+    app.run(host="0.0.0.0", port=port)  # Allow external access for deployment
