@@ -1,4 +1,3 @@
-
 const chatMessages = document.getElementById("chatMessages");
 const userInput = document.getElementById("userInput");
 const sendButton = document.getElementById("sendButton");
@@ -7,7 +6,7 @@ function addMessage(text, type) {
   messageDiv.className = type;
   messageDiv.textContent = text;
   chatMessages.appendChild(messageDiv);
-  chatMessages.scrollTop = chatMessages.scrollHeight; 
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 async function sendMessage() {
   const message = userInput.value.trim();

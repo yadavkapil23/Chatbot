@@ -3,16 +3,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  background-color: hsl(0, 0%, 39%); /* Soft blue */
+  background-color: hsl(0, 1%, 57%); 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* Chat container styling */
+/* Chat container */
 .chat-container {
-  background: #a0a6a2;
+  background: #579185;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 1400px; /* Width of the chat container */
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
 }
 
-/* Messages display area */
+/* Messages display */
 .messages {
   flex-grow: 1;
   overflow-y: auto; /* Allow scrolling when messages overflow */
